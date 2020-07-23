@@ -23,6 +23,7 @@ namespace zeusbeta01.Controllers
             _logger = logger;
         }
 
+        [Route("v2/all")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {

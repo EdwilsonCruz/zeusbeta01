@@ -45,7 +45,6 @@ namespace zeusbeta01
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
-
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

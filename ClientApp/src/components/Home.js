@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-//import styule from '@material-ui/styles'
+
 import Button from '@material-ui/core/Button';
 import styles from '../assets/scss/material-kit-react.scss';
 
@@ -8,7 +8,6 @@ export class Home extends Component {
   static displayName = Home.name;
   
   render () {
-    
     return (
       <div> 
         <h1 style={{color:'orange'}}>Hello, world! 1</h1>
