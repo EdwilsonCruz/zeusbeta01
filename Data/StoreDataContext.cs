@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using zeusbeta01.Data.Maps;
 using zeusbeta01.Models;
-
+using zeusbeta01.Data;
 using System;
 using FileContextCore;
 using System.ComponentModel.DataAnnotations;
@@ -21,7 +20,10 @@ namespace zeusbeta01.Data
 
         protected override void OnModelCreating(ModelBuilder builder){
             builder.Entity<Usuario>()
-                .ToTable("custom_usuario_tabela");
+                .ToTable("custom_usuario_tabela")
+                .HasKey(x=> x.Id);
+                //.Property(x => x.CreateDate);
+        
             //builder.ApplyConfiguration(new UsuarioMap());
             //builder.ApplyConfiguration(new CategoryMap());
 

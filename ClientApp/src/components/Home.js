@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-
 import Button from '@material-ui/core/Button';
-import styles from '../assets/scss/material-kit-react.scss';
 
 export class Home extends Component {
   
