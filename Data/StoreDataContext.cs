@@ -20,8 +20,8 @@ namespace zeusbeta01.Data
 
         protected override void OnModelCreating(ModelBuilder builder){
             builder.Entity<Usuario>()
-                .ToTable("custom_usuario_tabela")
-                .HasKey(x=> x.Id);
+                .ToTable("custom_usuario_tabela");
+                //.HasKey(x => x.Id);
                 //.Property(x => x.CreateDate);
         
             //builder.ApplyConfiguration(new UsuarioMap());
