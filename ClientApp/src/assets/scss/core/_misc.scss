@@ -15,7 +15,7 @@ h5,
 h6 {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   font-weight: 500;
-  line-height: 1.5em;
+  //line-height: 1.5em;
 }
 h1,
 h2,
@@ -76,11 +76,13 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  background-color: #e5e5e5;
-  color: $black-color;
+  --background-color: $deep-purple-a700;
+  background-color: $white;
+  background-image: url('../../img/gray.svg'); 
+  color: $black;
   margin: 0;
   font-size: 1rem;
-  text-align: left;
+  --text-align: left;
 }
 
 legend {
@@ -128,3 +130,45 @@ form {
 }
 /* ------------------------ */
 
+.homepage .home-section{  
+  background-image: url('../../img/home1.svg');  
+  position: relative;
+}
+.home-section{
+  min-height: 420px;
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.card {
+  border: none;
+}
+div > .bg-white{
+  @include shadow-big-color($grey-900);
+  border-radius: 0.25rem;
+  margin: 15px;
+  min-height: 300px;
+}
+div > .bg-white > section {
+  padding-top: 15px;
+}
+.altura {
+  min-height: 480px;
+}
+
+.card-footer{background-color: transparent;}
+
+/* Media inicio */
+@media (min-width: 768px) {
+  .card-group {
+    display: flex;
+    flex-flow: column;
+  }
+}
+@media (max-width: 576px) {
+  .card{ flex-direction: row; }
+  .container { margin: 0px; }
+  div > .homepage, .bg-white ,.col-md-auto,.col-lg-auto { margin: 0px; padding: 0px; }
+  div > .bg-white{ margin:0px; }
+  .home-section{ min-height: 320px; }
+}

@@ -1,33 +1,62 @@
 import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+
+import imgBootstrap from '../assets/img/bootstrap.svg';
+import imgReact from '../assets/img/React Logo.svg';
+import imgNetcore from '../assets/img/netcore.svg';
 
 export class Home extends Component {
-  
+
   static displayName = Home.name;
-  
-  render () {
+
+  render() {
     return (
-      <div> 
-        <h1 style={{color:'orange'}}>Hello, world! 1</h1>
-        <h1 className='h1'> Hello, world! 2</h1>
-        <h1 class='$orange-900'>Hello, world! 3</h1>
-        
-        <Button variant= 'contained' color='secondary'>
-          Hello World
-        </Button>
-        <p>Welcome to your new single-page application, built with:</p>
-        <ul>
-          <li><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</li>
-          <li><a href='https://facebook.github.io/react/'>React</a> for client-side code</li>
-          <li><a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling</li>
-        </ul>
-        <p>To help you get started, we have also set up:</p>        
-        <ul>
-          <li><strong>Client-side navigation</strong>. For example, click <em>Counter</em> then <em>Back</em> to return here.</li>
-          <li><strong>Development server integration</strong>. In development mode, the development server from <code>create-react-app</code> runs in the background automatically, so your client-side resources are dynamically built on demand and the page refreshes when you modify any file.</li>
-          <li><strong>Efficient production builds</strong>. In production mode, development-time features are disabled, and your <code>dotnet publish</code> configuration produces minified, efficiently bundled JavaScript files.</li>
-        </ul>
-        <p>The <code>ClientApp</code> subdirectory is a standard React application based on the <code>create-react-app</code> template. If you open a command prompt in that directory, you can run <code>npm</code> commands such as <code>npm test</code> or <code>npm install</code>.</p>
+      <div class='container'>
+        <div class='homepage'>
+          <section class='home-section col-md-auto col-lg-auto'>
+          </section>
+        </div>
+
+        <div class='container-md bg-white'>
+          <section>
+            <div class='card-group'>           
+              <div class='card'>
+                <img class='card-img-top rounded mx-auto col-4' src={imgNetcore} alt='Card image0 cap' ></img>                              
+                <div class='card-body'>                  
+                  <h5 class='card-title'>ASP.NET Core</h5>
+                  <p class='card-text'><a href='https://get.asp.net/'>ASP.NET Core</a> and <a href='https://msdn.microsoft.com/en-us/library/67ef8sbd.aspx'>C#</a> for cross-platform server-side code</p>
+                  <div class='card-footer text-center'>
+                    <a class="btn btn-primary btn-sm col" href='https://dotnet.microsoft.com/' target='_blank'>.Net Core</a>
+                  </div>
+                </div>
+              </div>    
+              <div class='card'>
+                <img class='card-img-top rounded mx-auto col-4' src={imgReact} alt='Card image2 cap' ></img>
+                <div class='card-body'>                 
+                  <h5 class='card-title'>React</h5>
+                  <p class='card-text'>A JavaScript library for building user interfaces.<a href='https://facebook.github.io/react/'>React</a> for client-side code.</p>
+                  <div class='card-footer text-center'>
+                    <a  class="btn btn-primary btn-sm col" href='https://reactjs.org/' target='_blank'>React</a>                  
+                  </div>                                    
+                </div>
+              </div>
+              <div class='card'>
+                <img class='card-img-top rounded mx-auto col-4' src={imgBootstrap} alt='Card bootstrap' ></img>
+                <div class='card-body'>                  
+                  <h5 class='card-title'>Bootstrap 4</h5>                 
+                  <p class='card-text'>Build fast, responsive sites with Bootstrap.<a href='http://getbootstrap.com/'>Bootstrap</a> for layout and styling.</p>
+                  <div class='card-footer text-center'>                                                                        
+                    <a class='btn btn-primary btn-sm col' href='https://getbootstrap.com/' target='_blank'>Bootstrap</a>                  
+                  </div>                                    
+                </div>
+              </div>               
+             </div> 
+          </section>
+        </div>
+        <div class='container'>
+          <section>
+           
+          </section>
+        </div>         
       </div>
     );
   }
